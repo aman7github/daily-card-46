@@ -1,0 +1,53 @@
+.outerdiv2{
+    width:100%;
+    height: 500px;
+    /* border: 1px solid red; */
+    background-image: url("https://zoomcar-assets.zoomcar.com/images/original/25371b7b5084fc451b0c3ec9eda278f791188c69.png?1672044863");
+    
+    background-size: 100%; 
+   position: relative;
+   margin-top: -50px;
+}
+
+.innerdiv2{
+    width:60%;
+    height: 160px;
+    /* border: 1px solid red; */
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.406);
+    color:white;
+    padding: 0 30px;
+    margin:50px 0 0 240px;
+}
+.firstP2{
+   
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.secondP2{
+    font-size: 20px;
+    font-weight: 500; 
+    margin-top: 14px;
+}
+.lowerdiv2{
+    width:100%;
+    height: 350px;
+    margin-top:-100px ;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    /* border: 1px solid red; */
+}
+.lowerdiv2>p:nth-child(1){
+    font-size: 33px;
+    margin-top: 30px;
+    font-weight: 500;
+}
+.lowerdiv2>p:nth-child(2){
+    font-size: 25px;
+    margin-top: 10px;
+}

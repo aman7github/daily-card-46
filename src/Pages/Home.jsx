@@ -4,6 +4,8 @@ import { TbArrowsLeftRight } from 'react-icons/tb';
 import {FaPlaneDeparture} from "react-icons/fa"
 import {BiCurrentLocation} from "react-icons/bi"
 
+// import UpperDiv from '../components/UpperDiv'
+// import CarCarousel from "../components/CarCarousel"
 
 
 
@@ -22,7 +24,7 @@ const Home = () => {
 
     }
 
- //console.log(Ref.current)
+ console.log(Ref.current)
 
 
 
@@ -57,8 +59,9 @@ const Home = () => {
         </p>
   </div>
 
-    
-
+     
+   
+   
 
 
     </>
