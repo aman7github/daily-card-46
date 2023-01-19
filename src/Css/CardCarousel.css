@@ -1,0 +1,58 @@
+.outerDiv{
+
+    
+    /* border:1px solid green; */
+    margin: -50px auto auto auto;
+    height: 550px ;
+    background-color: rgb(245,245,245);
+   
+    
+   
+    
+}
+
+/* Remember div which hold all card must have overflow hidden for move carousel */
+
+.secondDiv{
+   
+    display: flex;
+    gap:20px;
+    margin:auto;
+    width: 86%;
+    /* border:1px solid blue; */
+    scroll-behavior:smooth;
+    overflow: hidden;
+    
+}
+     
+.pre-btn2,.next-btn2{
+    z-index: 100;
+    position: absolute;
+    width:60px;
+    height: 60px;
+    font-size: 50px;
+    /* border:1px solid red; */
+    border-radius: 50%;
+    margin: 200px 0 0 0 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+    
+}
+.next-btn2{
+  right:10px;
+  
+}
+.next-btn2>p{
+    margin-top: -8px;
+    color: rgb(141, 137, 137);
+}
+.pre-btn2{
+    left:10px
+}
+.pre-btn2>p{
+    margin-top: -8px;
+    color: rgb(141, 137, 137);
+}

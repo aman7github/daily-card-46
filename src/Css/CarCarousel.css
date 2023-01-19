@@ -1,0 +1,62 @@
+.maindiv{
+  
+    /* border:1px solid red; */
+    margin: 500px auto auto auto;
+    position: relative;
+    overflow: hidden;
+    
+    
+}
+.CarCard{
+    min-width: 650px;
+    max-width: 650px;
+    height: 400px;
+    /* border:1px solid blue; */
+    padding: 0 70px;
+
+}
+
+/* Remember div which hold all card must have overflow hidden for move carousel */
+.carousel-div{
+   
+    display: flex;
+    overflow: hidden;
+    scroll-behavior:smooth;
+    margin-left: -340px;
+    
+
+    
+}
+.pre-btn,.next-btn{
+    position: absolute;
+    width:60px;
+    height: 14%;
+    font-size: 50px;
+    /* border:1px solid red; */
+    border-radius: 50%;
+    margin: 110px 0 0 0 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+    
+}
+.next-btn{
+  right:250px;
+  
+}
+.next-btn>p{
+    margin-top: -8px;
+    color: rgb(141, 137, 137);
+}
+.pre-btn{
+    left:250px
+}
+.pre-btn>p{
+    margin-top: -8px;
+    color: rgb(141, 137, 137);
+}
+.ani{
+    transform: scale(1.3);
+}
