@@ -31,7 +31,7 @@ const CarCarousel = () => {
 
      const nextbtn=()=>{
       let width = ref.current.clientWidth
-      ref.current.scrollLeft = ref.current.scrollLeft + (2*width/5)
+      ref.current.scrollLeft = ref.current.scrollLeft +  (2*width/5)
       //console.log(ref.current.scrollLeft)
      
      }

@@ -3,6 +3,7 @@ import "../Css/Home.css"
 import { TbArrowsLeftRight } from 'react-icons/tb';
 import {FaPlaneDeparture} from "react-icons/fa"
 import {BiCurrentLocation} from "react-icons/bi"
+import {Link as RouteLink} from "react-router-dom"
 
 // import UpperDiv from '../components/UpperDiv'
 // import CarCarousel from "../components/CarCarousel"
@@ -44,7 +45,11 @@ const Home = () => {
     
     <button className='uperrInputbtn' ><TbArrowsLeftRight className='arrowicon' /> Round Trip </button>
     <button  className='uperrInputbtn' onClick={handleclick}  ref={Ref3} > <FaPlaneDeparture className='arrowicon' />Airport Round Trip </button>
+
+    <RouteLink to="/booking" >
     <input type="text" className='LastInput' placeholder='      Pick up city,Airpot,Address or Hotel' /> <br />
+    </RouteLink>
+
     <BiCurrentLocation className='locationicon' /> <br />
     <input type="text" className='LastInput2' ref={Ref}  /><br />
     <button  className='LastInputbtn' ref={Ref2}  >FIND CARS</button>
