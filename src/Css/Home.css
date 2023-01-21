@@ -61,9 +61,10 @@
     height:55px;
     border-radius: 2px;
     background-color: white;
-    margin-top: 10px;
+    margin: 10px 0 0 4px;
     border:1px solid black;
     font-size: 15px;
+    padding: 0 30px;
 }
 .LastInput2{
     z-index: 2;
@@ -77,7 +78,7 @@
     display: none;
 }
 .locationicon{
-    margin: -34px 0 0 40px;
+    margin: -34px 0 0 68px;
     color:green;
 }
 .LastInputbtn{
@@ -100,7 +101,7 @@
 }
 .LastInput2Afterclick{
     display: block;
-    margin: 4px 0 0 35px;
+    margin: 4px 0 0 62px;
 }
 .green{
     color:green;

@@ -1,37 +1,37 @@
 import React from 'react'
-import "../Css/Home.css"
-import { TbArrowsLeftRight } from 'react-icons/tb';
-import {FaPlaneDeparture} from "react-icons/fa"
-import {BiCurrentLocation} from "react-icons/bi"
-import {Link as RouteLink} from "react-router-dom"
 
-// import UpperDiv from '../components/UpperDiv'
-// import CarCarousel from "../components/CarCarousel"
+import CarCarousel from "../components/CarCarousel"
+import Upperdiv from '../components/Upperdiv'
+import Picdiv from "../components/Picdiv"
+import CardCarousel from "../components/CardCarousel"
+import Picdiv2 from "../components/Picdiv2"
+import Footer from "../components/Footer"
+import Navbar from "../AllRoutes/Navbar"
 
 
 
 const Home = () => {
   
-    const Ref = React.useRef(null)
-    const Ref2 = React.useRef(null)
-    const Ref3 = React.useRef(null)
+//     const Ref = React.useRef(null)
+//     const Ref2 = React.useRef(null)
+//     const Ref3 = React.useRef(null)
   
 
-    const handleclick=()=>{
+//     const handleclick=()=>{
 
-         Ref.current.classList.add("LastInput2Afterclick")
-         Ref2.current.classList.add("lastInputbtnAfterclick")
-         Ref3.current.classList.add("green")
+//          Ref.current.classList.add("LastInput2Afterclick")
+//          Ref2.current.classList.add("lastInputbtnAfterclick")
+//          Ref3.current.classList.add("green")
 
-    }
+//     }
 
- console.log(Ref.current)
+//  console.log(Ref.current)
 
 
 
   return (
     <>
-    <div className='topdiv'>
+    {/* <div className='topdiv'>
         <img className='topdivImage' src="https://www.zoomcar.com/img/hero-banner-web.png" alt="pic" />
 
      <div className='topdivUpperdiv'>
@@ -62,11 +62,14 @@ const Home = () => {
        <p>
          CHOOSE FROM OUR WIDE RANGE OF CARS
         </p>
-  </div>
-
-     
-   
-   
+  </div> */}
+        <Navbar />
+       <Upperdiv />
+       <CarCarousel />
+        <Picdiv />
+        <CardCarousel />
+        <Picdiv2 />
+        <Footer />
 
 
     </>
