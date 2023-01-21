@@ -22,10 +22,27 @@
 /* <-----------------------date div --------------------> */
 
 .dateDiv{
-    border:1px solid red;
+    border:1px solid rgb(196, 189, 189);
     width:35%;
-    height: 70px;
+    height: 60px;
     margin:40px 0 0 150px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    
+}
+.dateDiv>div{
+   width: 42%;
+   height: 60px;
+   /* border:1px solid red; */
+   text-align: left;
+   margin-top: 5px;
+   padding: 0 20px;
+}
+
+.rightarrow{
+  font-size: 25px;
+  margin: 17px 0 0 -30px;
 }
 
 /* <-------------------------calender div -----------------------> */
@@ -35,7 +52,7 @@
     /* border:1px solid red; */
     width:70%;
     height: 330px; 
-    margin:20px 0 0 150px;
+    margin:40px 0 0 150px;
     display: flex;
     justify-content: space-between;
     background-color: rgb(251,251,251);
@@ -55,6 +72,7 @@
    
 
 }
+
 /* <------------------these css copy form npm react calendar github documentations--------------> */
 
 .react-calendar__navigation button,
@@ -81,7 +99,7 @@
     /* border:1px solid red; */
     width: 70%;
     height:120px;
-    margin: 20px 0 0 150px;
+    margin: 40px 0 0 150px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 

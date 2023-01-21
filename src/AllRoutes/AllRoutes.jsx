@@ -6,6 +6,7 @@ import Login from "../Pages/Login"
 import Signup from '../Pages/Signup'
 import Booking from '../Pages/Booking'
 import CalendarFun from '../Pages/Calendar'
+import ChooseCar from '../Pages/ChooseCar'
 
 const AllRoutes = () => {
   return (
@@ -16,6 +17,7 @@ const AllRoutes = () => {
      <Route path="/host"  element={<Host  />} />
      <Route path="/booking" element={<Booking />} />
      <Route path="/calendar" element={<CalendarFun />} />
+     <Route path="/choosecar" element={<ChooseCar />} />
     </Routes>
   )
 }

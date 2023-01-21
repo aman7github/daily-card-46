@@ -1,0 +1,346 @@
+.MainContainer{
+ 
+    /* border:1px solid red; */
+    width: 96%;
+    height: 1750px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto auto auto;
+
+}
+
+
+/* <--------------------------------------Left side div---------------------------------------------> */
+
+.sortingDiv{
+    /* border:1px solid red; */
+    width: 28%;
+    height: 1070px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.heading{
+    /* border:1px solid red; */
+    width: 90%;
+    height: 45px; 
+    margin:30px auto auto auto;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 20px;
+}
+.heading>h3:nth-child(2){
+    color:rgb(16,163,16);
+    font-size: 17px;
+}
+.P2{
+    width:70px;
+    margin:20px 0 0 10px;
+    font-size: 18px;
+}
+
+/* <----------------------------------sorting div------------------------------------------> */
+.filterDiv{
+    /* border:1px solid red; */
+    width: 83%;
+    margin: 20px auto auto auto;
+    height: 180px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px;
+  
+}
+.filterDiv>div{
+    border:1px solid rgb(189, 181, 181); 
+    height: 85px;
+   border-radius: 5px;
+   text-align: center;
+  
+}
+.filterDiv>div>p{
+    margin:4px 0 0 0;
+    color: rgb(61, 59, 59);
+}
+.relevanceIcon{
+    margin:20px 0 0 35px;
+    font-size: 20px;
+  
+}
+.downarrow{
+    margin: 20px 0 0 5px;
+    /* border:1px solid red; */
+  
+}
+.divForRupeeIcon{
+    display: flex;
+    justify-content: center;
+}
+.divForRupeeIcon>p{
+    width: 10px;
+    height: 25px;
+    margin:15px 0 0 1px;
+    font-weight: 700;
+    /* border:1px solid red; */
+}
+.staricon2{
+    margin:18px 0 0 32px;
+    font-size: 24px;
+}
+
+
+/* <---------------------------------------------fuel div-----------------------------------------> */
+
+.FuelDiv{
+    /* border:1px solid red; */
+    width: 83%;
+    margin: 20px auto auto auto;
+    height: 180px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px;
+
+}
+.FuelP{
+    font-size: 17px;
+    margin: 60px 0 0 -250px;
+    color: rgb(61, 59, 59);
+
+}
+.FuelDiv>div{
+    border:1px solid rgb(189, 181, 181); 
+    height: 85px;
+   border-radius: 5px;
+   text-align: center;
+  
+}
+.FuelIconComman{
+    font-size: 20px;
+    margin:20px 0 0 37px;
+}
+.FuelDiv>div>p{
+    margin:5px 0 0 0;
+}
+
+.FuelIconComman2{
+    font-size: 20px;
+    margin:20px 0 0 37px;
+   
+}
+.blur{
+    background-color: rgb(234, 231, 231);
+    color: rgb(152, 149, 149);
+}
+
+/* <-----------------------------------------------seats div------------------------------------> */
+
+.seatDiv{
+    /* border:1px solid red; */
+    width: 83%;
+    margin: 20px auto auto auto;
+    height: 90px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px;
+}
+.seatP{
+    font-size: 17px;
+    margin: 60px 0 0 -275px;
+    color: rgb(61, 59, 59);
+
+}
+
+.seatDiv>div{
+    border:1px solid rgb(189, 181, 181); 
+    height: 85px;
+   border-radius: 5px;
+   text-align: center;
+  
+}
+.FuelIconComman{
+    font-size: 20px;
+    margin:20px 0 0 37px;
+}
+.seatDiv>div>p{
+    margin:5px 0 0 0;
+}
+
+
+/* <------------------------------------------Transmission------------------------> */
+
+.TransmissionP{
+    font-size: 17px;
+    margin: 60px 0 0 -215px;
+    color: rgb(61, 59, 59);
+}
+.TransmissionDiv{
+     /* border:1px solid red;  */
+    width: 83%;
+    margin: 20px auto auto auto;
+    height: 90px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:10px;
+}
+.TransmissionDiv>div{
+    border:1px solid rgb(189, 181, 181); 
+    height: 85px;
+    border-radius: 5px;
+    text-align: center;
+  
+}
+.TransmissionIcon{
+    margin:20px 0 0 64px;
+    font-size: 22px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* <-------------------------------------Right Part divs------------------------------------> */
+
+
+.showCarDiv{
+    /* border:1px solid red; */
+    width: 70%;
+    height: 1750px;
+}
+
+/* <-------------------------------time and section of Right side part--------------------> */
+.TimeAnddateDiv{
+    /* border:1px solid red; */
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.TimeAnddateDiv>div{
+    border:1px solid red;
+    width: 49%;
+    height: 60px;
+    border-radius: 5px;
+}
+.locationIcon{
+ font-size: 20px;
+ color: rgb(16,163,16);
+ margin:17px 0 0 10px
+}
+.time{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.dateMainDiv{
+    width: 47%;
+    height: 60px;
+   
+}
+.timeInnerDiv{
+    width: 47%;
+    height: 60px;
+    
+}
+
+.dateMainDiv>p:nth-child(1){
+    font-size: 12px;
+    color: gray;
+    margin: 5px 0 0 40%;
+}
+.timeInnerDiv>p:nth-child(1){
+    font-size: 12px;
+    color: gray;
+    margin: 5px 0 0 -90px;
+}
+
+.timeInnerDiv>p:nth-child(2){
+    font-size: 15px;
+    font-weight: 600;
+    margin: 4px 0 0 -145px;
+}
+.dateMainDiv>p:nth-child(2){
+    font-size: 15px;
+    font-weight: 600;
+    margin: 4px 0 0 140px;
+}
+
+.rightArrowIcon{
+    margin:20px 0 0 0;
+    font-size: 20px;
+}
+
+
+/* <-----------------------------------------Car grid of right side section----------------------------> */
+
+.gridDiv{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    /* border: 1px solid green; */
+    width: 100% ;
+    height: 1500px;
+    margin-top: 20px;
+}
+.gridDiv>div{
+    /* border:1px solid red; */
+    height: 380px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 4px;
+    text-align: left;
+    
+   
+}
+.gridDiv>div>img{
+    
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy8HiUujC93RJ0QekoVc3qXlcolaLaOCJK3w&usqp=CAU")
+
+}
+.gridDiv>div>h4{
+    
+  font-size: 20px;
+  font-weight: 700;
+  margin: 2px 0 0 20px;
+
+}
+.detailingDiv>p{
+     
+    margin: 1px 0 0 20px;
+    color: gray;
+  
+  }
+  .gridDiv>div>h3{
+    
+    font-size: 23px;
+    font-weight: 700;
+    margin: 2px 0 0 20px;
+  
+  }
+  .stardiv{
+    /* border:1px solid red; */
+    width: 100px;
+    height: 30px;
+    margin:-33px 0 0 0;
+    border-top-right-radius: 15px;
+    background-color: white;
+  }
+  .stardiv>h6{
+    
+    font-size: 18px;
+    font-weight: 500;
+    margin: -25px 0 0 35px;
+    color: rgb(23, 22, 22);
+    
+  
+  }
+  .staricon{
+    margin:3px 0 0 1px;
+    color: rgb(202, 183, 16);
+    font-size: 24px;
+  }

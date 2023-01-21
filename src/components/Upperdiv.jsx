@@ -5,6 +5,7 @@ import {FaPlaneDeparture} from "react-icons/fa"
 import {BiCurrentLocation} from "react-icons/bi"
 import {Link as RouteLink} from "react-router-dom"
 import { AuthContext } from '../AuthContext/AuthContextProvider';
+import {BsCalendarDay} from "react-icons/bs"
 
 
 
@@ -16,7 +17,7 @@ const Upperdiv = () => {
     const Ref = React.useRef(null)
     const Ref2 = React.useRef(null)
     const Ref3 = React.useRef(null)
-  
+   
 
    
  
@@ -25,24 +26,23 @@ const Upperdiv = () => {
       
          const {choosedLocation} = React.useContext(AuthContext)
 
-          console.log(choosedLocation)
+         // console.log(choosedLocation)
 
      
     // <-----------------change css of input box and show calender input box  --------------> 
          
           const handleclick=()=>{
       
-               Ref.current.classList.add("LastInput2Afterclick")
-               Ref2.current.classList.add("lastInputbtnAfterclick")
-               Ref3.current.classList.add("green")
-      
+              Ref.current.classList.add("LastInput2Afterclick")
+              Ref2.current.classList.add("lastInputbtnAfterclick")
+              Ref3.current.classList.add("green")
+              
           }
         
-           if(choosedLocation!=''){
-             handleclick()
-           }
-
-
+        
+          // if(choosedLocation!=null){
+          //   handleclick()
+          // }
 
 
 
@@ -66,15 +66,16 @@ const Upperdiv = () => {
     <button  className='uperrInputbtn' onClick={handleclick}  ref={Ref3} > <FaPlaneDeparture className='arrowicon' />Airport Round Trip </button>
 
     <RouteLink to="/booking" >
-     <input type="text" className='LastInput' placeholder='   Pick up city,Airpot,Address or Hotel'  value={choosedLocation}  />    <br />
+     <input type="text" className='LastInput' placeholder='   Pick up city,Airpot,Address or Hotel' value={choosedLocation}   />    <br />
     </RouteLink>
 
     <BiCurrentLocation className='locationicon' /> <br />
 
     <RouteLink to="/calendar" >
-     <input type="text" className='LastInput2' ref={Ref}  /><br />
+     <input type="text" className='LastInput2' placeholder='            Confirm Booking date' ref={Ref}  /><br />
+    
     </RouteLink>
-
+    
 
     <button  className='LastInputbtn' ref={Ref2}  >FIND CARS</button>
      

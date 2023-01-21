@@ -2,7 +2,8 @@
 import React from 'react'
 import {HiOutlineArrowLeft} from "react-icons/hi"
 import "../Css/Booking.css"
-import  {Link as RouteLink} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
+import {Link } from "react-router-dom"
 import {BiCurrentLocation} from "react-icons/bi"
 import {TbCurrentLocation} from "react-icons/tb"
 import {BsMap} from "react-icons/bs"
@@ -15,6 +16,8 @@ const Booking = () => {
     const [currentState,setcurrentState ] = React.useState()
     const [typed,settyped] = React.useState('')
     const [RecentSearched,setRecentSearch] = React.useState('')
+    const{choosedLocation,GetChoosedLocation} = React.useContext(AuthContext)
+  
 
     // <------------------------------Get live location------------------------------------>
 
@@ -52,34 +55,32 @@ const Booking = () => {
 
 
 //   <--------function for Recent location----and by Authcontext set value of typed location globally--------------->
-         const{choosedLocation,GetChoosedLocation} = React.useContext(AuthContext)
+         
 
+         const navigate = useNavigate()
+
+         
             const btnclicked=()=>{
-                setRecentSearch(typed)
-                GetChoosedLocation(typed)
+               setRecentSearch(typed)
+               GetChoosedLocation(typed)
+               navigate("/")
+             
             }
-            console.log(choosedLocation)
+
+            
+            //console.log(choosedLocation)
 
               
              
-            
-
-        
-
-
-
-
-
-
 
 
   return (
     <>
 
 
-    <RouteLink to="/" >
+    <Link to="/" >
      <HiOutlineArrowLeft className='arrow2' />
-    </RouteLink>
+    </Link>
 
     {/* <-------------------First Div-------------------------> */}
 
@@ -119,10 +120,13 @@ const Booking = () => {
     </div>
    {/* <-------------------------Button------------------------------------> */}
        
-     <RouteLink to="/">
-       <button  ref={ref} className='ConfirmBtn' onClick={btnclicked} >CONFIRM PICKUP LOCATION</button>
-     </RouteLink>
+     
 
+
+
+   
+       <button  className='ConfirmBtn' onClick={btnclicked}  ref={ref}  >  CONFIRM PICKUP LOCATION</button>
+    
 
     </>
   )

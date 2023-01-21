@@ -1,20 +1,36 @@
 
 import React from 'react'
 import "../Css/Calendar.css"
-import {BsArrowLeft} from "react-icons/bs"
+import {BsArrowLeft,BsArrowRight} from "react-icons/bs"
 import Calendar from 'react-calendar'
 import {Link as RouteLink} from "react-router-dom"
+import { AuthContext } from '../AuthContext/AuthContextProvider'
+
 
 
 
 const CalendarFun = () => {
 
-    const [date, setdate] = React.useState(new Date());
+    const{Sdate1,Sdate2,Stime1,Stime2} = React.useContext(AuthContext)
 
+    const [date, setdate] = React.useState(new Date());
+   
      const onChange=(date)=>{
+      
         setdate(date)
+        Sdate1(date)
+        
      }
-   console.log(date)
+  
+     const [date2, setdate2] = React.useState(new Date());
+   
+     const onChange2=(date2)=>{
+      
+        setdate2(date2)
+        Sdate2(date2)
+        
+     }
+   
     
   // <--------------------for get time to range div------------------->
 
@@ -26,14 +42,16 @@ const CalendarFun = () => {
    
      const Getvalue=(e)=>{
         setvalue(e.target.value)
+        Stime1(e.target.value)
      }
 
      const Getvalue2=(e)=>{
       setvalue2(e.target.value)
+      Stime2(e.target.value)
    }
 
-     console.log(value2)
-    
+   
+   
 
   return (
     <div className='MainContainer'>
@@ -51,7 +69,15 @@ const CalendarFun = () => {
   {/* <-----------------selected date store div----------------> */}
 
       <div className='dateDiv' >
-
+          <div>
+          <p>Date - { date.toDateString()}</p>
+          <p> Time -  {value}</p>
+          </div>
+          <BsArrowRight className='rightarrow' />
+          <div>
+          <p>Date - { date2.toDateString()}</p>
+          <p> Time -  {value2}</p>
+          </div>
       </div>
 
      {/* <-------------------calendar div --------------------------> */}
@@ -63,7 +89,7 @@ const CalendarFun = () => {
         </div>
 
         <div> 
-        <Calendar className='calendar' onChange={onChange} value={date} />  
+        <Calendar className='calendar' onChange={onChange2} value={date2} />  
         </div>
 
       </div>
@@ -80,8 +106,10 @@ const CalendarFun = () => {
        <input ref={ref2} className="rangebar" type="range" name="range2"  min="00.00" max="24.00" step="0.01" value={value2} onChange={Getvalue2} />
        
       </div>
-
+       
+       <RouteLink to="/choosecar">
         <button  className='Continuebtn' >CONTINUE</button>
+       </RouteLink>
     </div>
   )
 }
