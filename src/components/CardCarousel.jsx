@@ -1,6 +1,8 @@
+
+import "../Css/CardCarousel.css"
 import React from 'react'
 import Card from './Card'
-import "../Css/CardCarousel.css"
+
 
 const CardCarousel = () => {
   

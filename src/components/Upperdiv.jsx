@@ -1,11 +1,13 @@
-import React from 'react'
+
 import "../Css/Home.css"
+import React from 'react'
+
 import { TbArrowsLeftRight } from 'react-icons/tb';
 import {FaPlaneDeparture} from "react-icons/fa"
 import {BiCurrentLocation} from "react-icons/bi"
 import {Link as RouteLink} from "react-router-dom"
 import { AuthContext } from '../AuthContext/AuthContextProvider';
-import {BsCalendarDay} from "react-icons/bs"
+
 
 
 
@@ -72,7 +74,7 @@ const Upperdiv = () => {
     <BiCurrentLocation className='locationicon' /> <br />
 
     <RouteLink to="/calendar" >
-     <input type="text" className='LastInput2' placeholder='            Confirm Booking date' ref={Ref}  /><br />
+     <input type="text" className='LastInput2' placeholder='Confirm Booking date' ref={Ref}  /><br />
     
     </RouteLink>
     
