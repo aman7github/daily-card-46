@@ -19,7 +19,7 @@ const Booking = () => {
     const{choosedLocation,GetChoosedLocation} = React.useContext(AuthContext)
   
 
-    // <------------------------------Get live location------------------------------------>
+    // <------------------------------Geting live location by using api------------------------------------>
 
     const Getlocation=()=>{
         fetch(`https://ipapi.co/json`)

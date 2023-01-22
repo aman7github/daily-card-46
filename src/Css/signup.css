@@ -1,0 +1,87 @@
+.Imagediv{
+    margin:auto;
+    /* border:1px solid red; */
+    width: 33%;
+    height: 420px;
+    text-align: left;
+}
+.Imagediv>img{
+    width:100%;
+    height: 330px;
+}
+.Imagediv>h2{
+  font-size: 23px;
+  font-weight: 600;
+  margin:37px 0 0 20px;
+}
+
+/* <-----------------------------------------mobile number div---------------------------> */
+
+.mobileNumberDiv{
+    border-bottom:1px solid rgb(219, 214, 214);
+    display: flex;
+    width:30%;
+    height: 60px;
+    margin:20px auto auto auto;
+    
+   
+}
+.mobilefirstdiv{
+    width: 20%;
+    border-right:1px solid rgb(211, 207, 207);
+    height: 40px;
+    margin: -5px 0 0 20px;
+
+}
+.mobilefirstdiv>p{
+   font-weight: 500;
+   margin: 7px 0 0 -20px;
+   color: rgb(215, 87, 87);
+}
+
+.mobileSecondP{  
+    font-size: 18px;
+    color: gray;
+    margin-left: 10px;
+}
+
+/* <---------------------------------------------email div-----------------------------> */
+
+.emailDiv{
+   width: 30%;
+   margin:  auto;
+   border-bottom:1px solid rgb(218, 210, 210);
+   height: 40px;
+   text-align: left;
+}
+.emailDiv>p{
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(16,163,16);
+    margin: 14px 0 0 0;
+}
+
+/* <-------------------------------------social div----------------------------------------------> */
+
+.Social{
+    width: 30%;
+    margin:  auto;
+    text-align: left;
+    display: flex;
+}
+.Social>p{
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(16,163,16);
+    margin: 14px 0 0 0;
+}
+.face{
+    margin:17px 0 0 20px;
+    font-size: 24px;
+    color: rgb(24,119,242);
+}
+.google{
+    margin:17px 0 0 20px;
+    font-size: 22px;
+    color: rgb(212, 20, 20);
+}

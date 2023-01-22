@@ -7,6 +7,7 @@ import Signup from '../Pages/Signup'
 import Booking from '../Pages/Booking'
 import CalendarFun from '../Pages/Calendar'
 import ChooseCar from '../Pages/ChooseCar'
+import Mobile from '../Pages/Mobile'
 
 const AllRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const AllRoutes = () => {
      <Route path="/booking" element={<Booking />} />
      <Route path="/calendar" element={<CalendarFun />} />
      <Route path="/choosecar" element={<ChooseCar />} />
+     <Route path="/mobile" element={<Mobile />} />
     </Routes>
   )
 }

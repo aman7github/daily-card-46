@@ -10,9 +10,12 @@ import {
     DrawerContent,
     DrawerCloseButton,
     Button,
-    Input,useDisclosure
+    Input,useDisclosure,Box
   } from '@chakra-ui/react'
 import {HamburgerIcon} from "@chakra-ui/icons"
+import {Link as RouteLink} from "react-router-dom"
+import {FaCar} from "react-icons/fa"
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -25,13 +28,18 @@ const Navbar = () => {
 
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()
+    const navigate = useNavigate()
+
+    const handleClick=()=>{
+      navigate("/signup")
+    }
 
 
   return (
     <div className='navbar'  >
      
      <div >
-        <Button ref={btnRef} onClick={onOpen} style={{marginLeft:"-440px", marginTop:"14px",color:"white",backgroundColor:"black",border:"1px solid white" }} >
+        <Button ref={btnRef} className="hamburgerBtn" onClick={onOpen} style={{marginLeft:"-390px", marginTop:"14px",color:"white",backgroundColor:"black",border:"1px solid white" }} >
         <HamburgerIcon />
         </Button>
         <Drawer
@@ -43,18 +51,20 @@ const Navbar = () => {
           <DrawerOverlay />
           <DrawerContent>
             <DrawerCloseButton />
-            <DrawerHeader>Create your account</DrawerHeader>
-  
+            <RouteLink to="/signup" >
+             <DrawerHeader style={{backgroundColor:"rgb(210, 206, 206)",fontWeight:"700"}} >Login or Signup</DrawerHeader>
+            </RouteLink>
             <DrawerBody>
-              <Input placeholder='Type here...' />
+              <RouteLink to="/booking">
+               <Box style={{marginTop:"20px",fontSize:"18px",fontWeight:"500"}} >Change City</Box>
+              </RouteLink> 
+               <Box style={{marginTop:"20px",fontSize:"18px",fontWeight:"500"}} >Become a Host</Box>
+               <Box style={{marginTop:"20px",fontSize:"18px",fontWeight:"500"}} >Zoom Car Fleet Vehicles Policies</Box>
+               <Box style={{marginTop:"20px",fontSize:"18px",fontWeight:"500"}} >Help & Support</Box>
+              
+
             </DrawerBody>
-  
-            <DrawerFooter>
-              <Button variant='outline' mr={3} onClick={onClose}>
-                Cancel
-              </Button>
-              <Button colorScheme='blue'>Save</Button>
-            </DrawerFooter>
+          
           </DrawerContent>
         </Drawer>
 
@@ -64,14 +74,14 @@ const Navbar = () => {
 
 
      <div className='icondiv' >
-
+     <FaCar className='CarIcon' /> <p className='iconLogoP' >   ZoomCar</p>
      </div>
 
         <div className='btndiv'>
 
         <button className='hostbtn'  >Become a Host</button>
-        <button className='loginbtn'  >Login</button>
-        <button className='signupbtn' > Signup</button>
+        {/* <button className='loginbtn'  >Login</button> */}
+        <button className='signupbtn' onClick={handleClick} > Signup/Login</button>
         </div>
      
 

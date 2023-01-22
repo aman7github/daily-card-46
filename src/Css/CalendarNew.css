@@ -1,0 +1,123 @@
+.MainContainer2{
+    padding-bottom: 50px;
+}
+
+.arrowdiv2{
+    width: 20%;
+    height: 40px;
+    margin: 60px 0 0 50px;
+}
+
+.leftarrow2{
+    font-size: 27px;
+}
+
+.arrowdiv2>p{
+    font-size: 23px;
+    font-weight: 500;
+    margin: -30px 0 0 0;
+}
+
+/* <-------------------------------date div--------------> */
+
+.dateDiv2{
+    border:1px solid rgb(196, 189, 189);
+    width: 37%;
+    height: 60px;
+    margin: 40px 0 0 150px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.dateDiv2>div{
+    width: 42%;
+    height: 60px;
+    text-align: left;
+    margin-top: 5px;
+    padding: 0 20px;
+}
+
+.rightarrow2{
+    font-size: 25px;
+    margin: 17px 0 0 -30px;
+}
+
+/* <-------------------calendar div---------------------> */
+
+.calendarMainDiv2{
+    width: 70%;
+    height: 330px;
+    margin:40px 0 0 150px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(251,251,251);
+}
+
+.calendarMainDiv2>div{
+    width: 44%;
+    height: 350px;
+}
+
+.calendar2{
+    background-color: rgb(251,251,251);
+    height: 300px;
+    line-height: 37px;
+}
+
+/* <--------------these css copy from npm react calendar github----------------------------> */
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: #e6e6e6;
+}
+
+.react-calendar__navigation button {
+    min-width: 44px;
+    background: none;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+
+
+
+
+
+
+
+/* <----------------------Range div--------------------->  */
+
+.Rangediv2{
+    width: 70%;
+    height: 120px;
+    margin: 40px 0 0 150px;
+    border-radius: 10px;
+
+}
+
+.rangebar2{
+    width:70%;
+    margin: 30px 0 0 20px;
+    accent-color: rgb(16,163,16)
+}
+
+.Continuebtn2{
+
+ width:30%;
+ height: 55px;
+ margin: 20px auto auto auto;
+ border-radius: 7px;
+ background-color: rgb(16,163,16);
+ color:white;
+ font-weight: 600;
+ letter-spacing: 1px;
+ font-size: 15px;
+ margin: 50px 0 0 -100px;
+
+
+
+
+
+
+}

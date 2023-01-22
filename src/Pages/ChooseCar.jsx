@@ -8,6 +8,9 @@ import {BsBookmarkCheck,BsArrowDown,BsArrowUp} from "react-icons/bs"
 import {GiWaterDrop} from "react-icons/gi"
 import {MdElectricalServices,MdLocalGasStation,MdAirlineSeatReclineNormal} from "react-icons/md"
 import {TbManualGearbox} from "react-icons/tb"
+import { AuthContext } from '../AuthContext/AuthContextProvider'
+import {Link as RouteLink} from "react-router-dom"
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -30,7 +33,36 @@ const ChooseCar = () => {
  
    ]
 
+   const navigate = useNavigate()
+  // <-----------------------------------Authcontext--------------------------------->
+
+     const{choosedLocation,selectedDate1,selectedDate2}  = React.useContext(AuthContext)
+     
+     
+
+
+
+
+
+
+
+
     const [data,setdata] = React.useState(Cardata)
+    const [count,setcount]= React.useState(1)
+
+       React.useEffect(()=>{
+     
+       },[count])
+
+
+// <------------------------------------------sort by relevance---------------------------------->  
+    const Relevance=()=>{
+      setdata(Cardata)
+      setcount(count+1)
+    }
+
+
+
 
 // <------------------------------------------sort by price---------------------------------->  
     const LowToHighPrice=()=>{
@@ -40,11 +72,13 @@ const ChooseCar = () => {
             if(a.price<b.price) return -1
             return 0
         })
+
         setdata(data)
+        setcount(count+1)
         console.log(data)
       
     }
- 
+    
    const HighToLowPrice=()=>{
       
     data.sort((a,b)=>{
@@ -53,6 +87,7 @@ const ChooseCar = () => {
         return 0
     })
      setdata(data)
+     setcount(count+1)
 }
   
 
@@ -66,45 +101,56 @@ const ChooseCar = () => {
         return 0
     })
     setdata(data)
+    setcount(count+1)
+    console.log(data)
  } 
 
 
 // <-------------------------------------filter by seats-------------------------------->
 
       const FilterBySeats5=()=>{
-         data =  data.filter((el)=>{
-           return  el.seats<=5    
+          
+          //   here I took Cardata because every filterby5 change data value only for 5seats after that if i filter again for 6 but data allready changed for 5 seats then how you get 6 seats data form 5 seats? its give null value
+          let res = Cardata.filter((el)=>{ 
+          return  el.seats<=5    
       })
-         setdata(data)
+          setdata(res)
+          setcount(count+1)
+         
       }
 
       const FilterBySeats6=()=>{
-        data =  data.filter((el)=>{
-          return  el.seats==6    
+          let res2 =  Cardata.filter((el)=>{
+          return  el.seats===6    
      })
-        setdata(data)
+        setdata(res2)
+        setcount(count+1)
      }
      const FilterBySeats7=()=>{
-        data =  data.filter((el)=>{
-          return  el.seats==7    
+         
+          let res3 =  Cardata.filter((el)=>{
+          return  el.seats===7    
      })
-       setdata(data)
+       setdata(res3)
+       setcount(count+1)
      }
 
 //   <-------------------------------------filter by fuel------------------------------>
         
       const SortbyPetrol=()=>{
-        data = data.filter((el)=>{
-            return el.fuel=="petrol"
+        let res4 = Cardata.filter((el)=>{
+            return el.fuel==="petrol"
         })
-        setdata(data)
+        setdata(res4)
+        setcount(count+1)
       }
      
       const SortbyDiesel=()=>{
-        data = data.filter((el)=>{
-            return el.fuel=="diesel"
+          let res5 = Cardata.filter((el)=>{
+              return el.fuel==="diesel"
         })
-        setdata(data)
+        setdata(res5)
+        setcount(count+1)
       }
 
 
@@ -113,29 +159,25 @@ const ChooseCar = () => {
  
 
   const SortbyAutomatic=()=>{
-    data = data.filter((el)=>{
+    let res6 = Cardata.filter((el)=>{
         return el.type=="automatic"
     })
-    setdata(data)
+    setdata(res6)
+    setcount(count+1)
   }
   
 
     const SortbyMannual=()=>{
-        data = Cardata.filter((el)=>{
+        let res7 = Cardata.filter((el)=>{
             return el.type=="mannual"
         })
-        setdata(data)
+        setdata(res7)
+        setcount(count+1)
     }
      
  
-
-
-
-
-
-
-
-
+    
+   
 
 
 
@@ -150,7 +192,7 @@ const ChooseCar = () => {
 
           <div className='heading' >
             <h3>Sort & Filters</h3>
-            <h3>RESET</h3>
+            <h3 onClick={Relevance} >RESET</h3>
            
           </div>
  {/* <------------------------------------sort section--------------------------------->  */}
@@ -158,7 +200,7 @@ const ChooseCar = () => {
 
          <div className='filterDiv' >
           
-           <div>
+           <div onClick={Relevance} >
            <BsBookmarkCheck className='relevanceIcon' /> <p>Relevance</p>
            </div>
 
@@ -260,19 +302,16 @@ const ChooseCar = () => {
 
 
 
-
-
-
-
       </div>
 
 
 
 
-
-
-
   {/* <----------------------------------------------Right side divs------------------------------------------> */}
+
+
+
+
 
       <div className='showCarDiv'>
 
@@ -282,21 +321,21 @@ const ChooseCar = () => {
 
           <div className='locationdiv'>
            <BiCurrentLocation className='locationIcon' />
-           <p></p>
+           <p >{choosedLocation}</p>
           </div>
           
 
           <div className='time'>
             <div className='timeInnerDiv' >
                 <p>START DATE/TIME</p>
-                <p>hjkkjk</p>
+                <p>{selectedDate1}</p>
             </div>
 
            <BsArrowRight className='rightArrowIcon' />
              
              <div className='dateMainDiv' >
                 <p className='P1' >END DATE/TIME</p>
-                <p>ljkjlljl</p>
+                <p>{selectedDate2}</p>
              </div>
 
           </div>
@@ -309,7 +348,7 @@ const ChooseCar = () => {
           
           {
             data.map((el)=>{
-                return <div key={el.id} >
+                return <div key={el.id} onClick={()=>navigate("/signup")} >
                    <img src={el.img} alt="pic" />
                     <div className='stardiv'>
                       <GrStar className='staricon' />
@@ -322,6 +361,7 @@ const ChooseCar = () => {
                    </div>
                    <h3> ₹ {el.price}</h3>
                 </div>
+               
             })
           }
 

@@ -1,24 +1,26 @@
 
 import React from 'react'
-import "../Css/Calendar.css"
+
 import {BsArrowLeft,BsArrowRight} from "react-icons/bs"
 import Calendar from 'react-calendar'
 import {Link as RouteLink} from "react-router-dom"
 import { AuthContext } from '../AuthContext/AuthContextProvider'
+
+import "../Css/CalendarNew.css"
 
 
 
 
 const CalendarFun = () => {
 
-    const{Sdate1,Sdate2,Stime1,Stime2} = React.useContext(AuthContext)
+    const{Sdate1,Sdate2,Stime1,Stime2,selectedDate1,selectedDate2} = React.useContext(AuthContext)
 
     const [date, setdate] = React.useState(new Date());
    
      const onChange=(date)=>{
       
         setdate(date)
-        Sdate1(date)
+        Sdate1(date.toDateString())
         
      }
   
@@ -27,11 +29,11 @@ const CalendarFun = () => {
      const onChange2=(date2)=>{
       
         setdate2(date2)
-        Sdate2(date2)
+        Sdate2(date2.toDateString())
         
      }
    
-    
+    console.log(selectedDate1,selectedDate2)
   // <--------------------for get time to range div------------------->
 
      const [value,setvalue]= React.useState('')
@@ -54,13 +56,13 @@ const CalendarFun = () => {
    
 
   return (
-    <div className='MainContainer'>
+    <div className='MainContainer2'>
 
   {/* <--------------------arrow navigation--------------------> */}
 
-    <div className='arrowdiv' >
+    <div className='arrowdiv2' >
       <RouteLink to="/"  >
-       <BsArrowLeft className='leftarrow' />
+       <BsArrowLeft className='leftarrow2' />
       </RouteLink>
        <p>Choose Trip Dates</p>
     </div>
@@ -68,12 +70,12 @@ const CalendarFun = () => {
 
   {/* <-----------------selected date store div----------------> */}
 
-      <div className='dateDiv' >
+      <div className='dateDiv2' >
           <div>
           <p>Date - { date.toDateString()}</p>
           <p> Time -  {value}</p>
           </div>
-          <BsArrowRight className='rightarrow' />
+          <BsArrowRight className='rightarrow2' />
           <div>
           <p>Date - { date2.toDateString()}</p>
           <p> Time -  {value2}</p>
@@ -82,33 +84,33 @@ const CalendarFun = () => {
 
      {/* <-------------------calendar div --------------------------> */}
 
-      <div className='calendarMainDiv'>
+      <div className='calendarMainDiv2'>
         
         <div >
-        <Calendar className='calendar' onChange={onChange} value={date} />  
+        <Calendar className='calendar2' onChange={onChange} value={date} />  
         </div>
 
         <div> 
-        <Calendar className='calendar' onChange={onChange2} value={date2} />  
+        <Calendar className='calendar2' onChange={onChange2} value={date2} />  
         </div>
 
       </div>
 
      {/* <-------------------date Range-------------------------------> */}
       
-      <div className='Rangediv'>
+      <div className='Rangediv2'>
         <label className='label' > Pick Up Time </label>
-       <input ref={ref} className="rangebar" type="range" name="range"  min="00.00" max="24.00" step="0.01" value={value} onChange={Getvalue} />
+       <input ref={ref} className="rangebar2" type="range" name="range"  min="00.00" max="24.00" step="0.01" value={value} onChange={Getvalue} />
        
        <br />
 
        <label className='label' > Drop Off Time </label>
-       <input ref={ref2} className="rangebar" type="range" name="range2"  min="00.00" max="24.00" step="0.01" value={value2} onChange={Getvalue2} />
+       <input ref={ref2} className="rangebar2" type="range" name="range2"  min="00.00" max="24.00" step="0.01" value={value2} onChange={Getvalue2} />
        
       </div>
        
        <RouteLink to="/choosecar">
-        <button  className='Continuebtn' >CONTINUE</button>
+        <button  className='Continuebtn2' >CONTINUE</button>
        </RouteLink>
     </div>
   )

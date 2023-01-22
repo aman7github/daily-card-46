@@ -63,7 +63,7 @@ const Upperdiv = () => {
   <div className='topdivInputdiv' >
     
     <button className='uperrInputbtn' ><TbArrowsLeftRight className='arrowicon' /> Round Trip </button>
-    <button  className='uperrInputbtn' onClick={handleclick}  ref={Ref3} > <FaPlaneDeparture className='arrowicon' />Airport Round Trip </button>
+    <button  className='uperrInputbtn' onClick={handleclick}  ref={Ref3} > <FaPlaneDeparture className='arrowicon' />Confirm Trip Date </button>
 
     <RouteLink to="/booking" >
      <input type="text" className='LastInput' placeholder='   Pick up city,Airpot,Address or Hotel' value={choosedLocation}   />    <br />

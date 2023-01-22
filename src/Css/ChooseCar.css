@@ -32,6 +32,7 @@
 .heading>h3:nth-child(2){
     color:rgb(16,163,16);
     font-size: 17px;
+    cursor: pointer;
 }
 .P2{
     width:70px;
@@ -56,6 +57,13 @@
    border-radius: 5px;
    text-align: center;
   
+}
+.filterDiv>div:hover{
+    cursor: pointer;
+}
+.changeColorByClick{
+   background-color: rgb(16,163,16);
+   color:white;
 }
 .filterDiv>div>p{
     margin:4px 0 0 0;
@@ -113,6 +121,9 @@
    text-align: center;
   
 }
+.FuelDiv>div:hover{
+  cursor: pointer;
+}
 .FuelIconComman{
     font-size: 20px;
     margin:20px 0 0 37px;
@@ -156,6 +167,9 @@
    text-align: center;
   
 }
+.seatDiv>div{
+    cursor: pointer;
+}
 .FuelIconComman{
     font-size: 20px;
     margin:20px 0 0 37px;
@@ -186,7 +200,11 @@
     height: 85px;
     border-radius: 5px;
     text-align: center;
+   
   
+}
+.TransmissionDiv>div:hover{
+    cursor: pointer;
 }
 .TransmissionIcon{
     margin:20px 0 0 64px;
@@ -221,15 +239,22 @@
     justify-content: space-between;
 }
 .TimeAnddateDiv>div{
-    border:1px solid red;
+    border:1px solid rgb(16,163,16);
     width: 49%;
     height: 60px;
     border-radius: 5px;
+}
+.TimeAnddateDiv>div:hover{
+    cursor: pointer;
 }
 .locationIcon{
  font-size: 20px;
  color: rgb(16,163,16);
  margin:17px 0 0 10px
+}
+.locationdiv>p{
+ margin:-23px 0 0 -190px;
+
 }
 .time{
     display: flex;
@@ -262,12 +287,12 @@
 .timeInnerDiv>p:nth-child(2){
     font-size: 15px;
     font-weight: 600;
-    margin: 4px 0 0 -145px;
+    margin: 4px 0 0 -75px;
 }
 .dateMainDiv>p:nth-child(2){
     font-size: 15px;
     font-weight: 600;
-    margin: 4px 0 0 140px;
+    margin: 4px 0 0 80px;
 }
 
 .rightArrowIcon{
@@ -295,6 +320,9 @@
     text-align: left;
     
    
+}
+.gridDiv>div:hover{
+    cursor: pointer;
 }
 .gridDiv>div>img{
     

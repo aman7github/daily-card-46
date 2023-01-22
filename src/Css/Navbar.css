@@ -7,16 +7,45 @@
     background-color: rgb(10, 9, 9);
 }
 
+
+
+.icondiv{
+    /* border:1px solid blue;  */
+    width: 270px; 
+    margin-left: -590px;
+    border-radius: 2px;
+    display: flex;
+    background-color: rgb(78, 77, 77);
+    
+}
+.CarIcon{
+    font-size: 30px;
+    margin:20px 0 0 20px;
+    color:white
+}
+
+
+.iconLogoP{
+    font-size: 35px;
+    font-weight: 800;
+    color:rgb(34, 192, 34);
+    margin: 5px 0 0 20px;
+
+    
+}
+
+
 .btndiv{
-    width: 30%;
+    width: 20%;
     display: flex;
     justify-content: space-around;
-    margin-right: -250px;
+    margin-right: -50px;
 }
+
 .hostbtn{
     border:1px solid white;
     height: 40px;
-    margin-top: 12px;
+    margin: -57px -200px 0 0;
     width: 140px;
     border-radius: 15px;
     color: black;
@@ -30,10 +59,10 @@
     background-color: black;
 
 }
-.loginbtn{
+/* .loginbtn{
     border:1px solid white; 
     height: 40px;
-    margin-top: 12px;
+    margin-top: -57px;
     width: 80px;
     border-radius: 7px;
     color: black;
@@ -44,24 +73,20 @@
     color: white;
     background-color: black;
 
-}
+} */
 .signupbtn{
     border:1px solid white; 
     height: 40px;
-    margin-top: 12px;
-    width: 80px;
+    margin: -57px -270px 0 0;
+    width: 140px;
     border-radius: 7px;
     color: black;
     background-color: white;
-    font-weight: 500;
+    font-size: 17px;
+    font-weight: 600;
 }
 .signupbtn:hover{
     color: white;
     background-color: black;
 
-}
-.icondiv{
-    border:1px solid blue; 
-    width: 300px; 
-    margin-left: -670px;
 }
