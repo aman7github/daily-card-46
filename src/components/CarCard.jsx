@@ -2,10 +2,8 @@ import React from 'react'
 
 const CarCard = ({img}) => {
  
-   // const reff = React.useRef(null)
-   
-    
-    
+    const reff = React.useRef(null)
+
 
   return (
     <div className='CarCard'>
