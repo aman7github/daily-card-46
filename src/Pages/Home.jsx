@@ -64,8 +64,8 @@ const Home = () => {
         </p>
   </div> */}
         <Navbar />
-       <Upperdiv />
-       <CarCarousel />
+        <Upperdiv />
+        <CarCarousel />
         <Picdiv />
         <CardCarousel />
         <Picdiv2 />
