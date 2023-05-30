@@ -71,7 +71,7 @@ const Upperdiv = () => {
      <input type="text" className='LastInput' placeholder='   Pick up city,Airpot,Address or Hotel' value={choosedLocation}   />    <br />
     </RouteLink>
 
-    <BiCurrentLocation className='locationicon' /> <br />
+   
 
     <RouteLink to="/calendar" >
      <input type="text" className='LastInput2' placeholder='Confirm Booking date' ref={Ref}  /><br />
